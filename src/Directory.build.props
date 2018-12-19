@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <Authors>Alessio Franceschelli</Authors>
+    <PackageTags>HttpClient HttpClientFactory AspNetCore</PackageTags>
+    <PackageLicenseUrl>https://github.com/alefranz/HttpClientLab/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/alefranz/HttpClientLab</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/alefranz/HttpClientLab.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>https://github.com/alefranz/HttpClientLab/releases</PackageReleaseNotes>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="All"/>
+  </ItemGroup>
+</Project>
