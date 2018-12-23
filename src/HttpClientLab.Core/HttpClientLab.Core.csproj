@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>HttpClientLab</RootNamespace>
 
-    <Description>Core functionality off HttpClientLab, usually installed through HttpClientLab.</Description>
+    <Description>Core functionalities of HttpClientLab, usually installed through HttpClientLab.</Description>
   </PropertyGroup>
 
   <ItemGroup>
