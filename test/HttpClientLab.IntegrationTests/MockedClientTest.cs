@@ -139,7 +139,7 @@ TestClient
 
         private class StringOutput : ITestOutputHelper
         {
-            StringBuilder _stringBuilder = new StringBuilder();
+            readonly StringBuilder _stringBuilder = new StringBuilder();
 
             public string Content => _stringBuilder.ToString();
 
