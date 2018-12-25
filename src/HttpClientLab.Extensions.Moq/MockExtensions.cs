@@ -1,10 +1,13 @@
 using Moq;
 using Xunit.Abstractions;
+using System;
 
 namespace HttpClientLab
 {
     public static class MockExtensions
     {
+        static readonly bool HasNotWindowsNewLine = Environment.NewLine != "\r\n";
+
         /// <summary>
         /// Create a builder for the behaviour of any client.
         /// </summary>
@@ -42,7 +45,11 @@ namespace HttpClientLab
             {
                 foreach (var arg in invocation.Arguments)
                 {
-                    output.WriteLine(arg.ToString());
+                    // TODO: better output
+                    var argOutput = arg.ToString();
+                    // ToString does not use Environment.NewLine
+                    if (HasNotWindowsNewLine) argOutput = argOutput.Replace("\r\n", Environment.NewLine);
+                    output.WriteLine(argOutput);
                 }
             }
         }

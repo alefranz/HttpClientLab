@@ -1,5 +1,7 @@
 _HttpClientLab turns the HttpClientFactory into a lab, so you can mock the HttpClient to write tests._
 
+[![Build Status](https://alefranz.visualstudio.com/HttpClientLab/_apis/build/status/alefranz.HttpClientLab?branchName=master)](https://alefranz.visualstudio.com/HttpClientLab/_build/latest?definitionId=1?branchName=master) [![](https://img.shields.io/nuget/dt/HttpClientLab.svg?label=NuGet%20downloads)](https://www.nuget.org/packages/HttpClientLab/)
+
 ## About HttpClientLab
 
 HttpClientLab is a free, open source, testing tool for the .NET Core HttpClientFactory.
