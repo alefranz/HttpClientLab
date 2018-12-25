@@ -145,7 +145,8 @@ TestClient
 
             public void WriteLine(string message)
             {
-                _stringBuilder.AppendLine(message);
+                _stringBuilder.Append(message);
+                _stringBuilder.Append(Environment.NewLine);
             }
 
             public void WriteLine(string format, params object[] args)
