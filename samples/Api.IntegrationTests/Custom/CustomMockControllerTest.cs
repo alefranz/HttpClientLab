@@ -1,4 +1,4 @@
-﻿using HttpClientLab;
+using HttpClientLab;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Moq;
 using System.Net;
@@ -41,7 +41,7 @@ namespace Api.IntegrationTests.Custom
             var response = await client.GetAsync("/sample");
 
             // Print all http requests to get helpful info on failure
-            mockedHttpClientBehaviour.WriteHttpRequests(_output);
+            //mockedHttpClientBehaviour.WriteHttpRequests(_output);
 
             // Assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);

@@ -26,7 +26,8 @@ namespace HttpClientLab
             try
             {
                 response = _behaviour.Handle(request, _name);
-            } catch(Exception exception)
+            }
+            catch (Exception exception)
             {
                 _logger.LogError("Unable to handle {request}\n{error}", request, exception.Message);
                 throw;

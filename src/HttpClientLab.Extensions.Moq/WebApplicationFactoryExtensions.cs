@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using Moq;
+using System;
 
 namespace HttpClientLab
 {
@@ -14,10 +15,11 @@ namespace HttpClientLab
         /// <returns></returns>
         public static WebApplicationFactory<TEntryPoint> WithHttpClientBehaviour<TEntryPoint>(
             this WebApplicationFactory<TEntryPoint> factory,
-            out Mock<IHttpClientBehaviour> httpClientBehaviour)
+            Action<Mock<IHttpClientBehaviour>> configureHttpClientBehaviour)
              where TEntryPoint : class
         {
-            httpClientBehaviour = new Mock<IHttpClientBehaviour>(MockBehavior.Strict);
+            var httpClientBehaviour = new Mock<IHttpClientBehaviour>(MockBehavior.Strict);
+            configureHttpClientBehaviour(httpClientBehaviour);
             return factory.WithHttpClientBehaviour(httpClientBehaviour.Object);
         }
     }
